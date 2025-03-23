@@ -9,12 +9,14 @@
 <body>
     <!-- Mode Selection -->
     <div class="mode-selection">
+        <h2>Select Mode</h2>
         <button id="player-mode">Play with Friend</button>
         <button id="computer-mode">Play with Computer</button>
     </div>
 
     <!-- Player Name Input -->
     <div class="player-input hide">
+        <h2>Enter Player Details</h2>
         <label for="player-name">Enter Your Name: </label>
         <input type="text" id="player-name" placeholder="Your Name" required>
 
@@ -35,7 +37,7 @@
     </div>
 
     <!-- Game Board -->
-    <main class="hide">
+    <main class="game-container hide">
         <h1>Tic Tac Toe Game</h1>
 
         <!-- Scoreboard -->
@@ -46,21 +48,24 @@
 
         <div class="container">
             <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
+                <button class="box" id="box-1"></button>
+                <button class="box" id="box-2"></button>
+                <button class="box" id="box-3"></button>
+                <button class="box" id="box-4"></button>
+                <button class="box" id="box-5"></button>
+                <button class="box" id="box-6"></button>
+                <button class="box" id="box-7"></button>
+                <button class="box" id="box-8"></button>
+                <button class="box" id="box-9"></button>
             </div>
         </div>
 
-        <button id="new-game-btn">New Game</button>
-        <button id="reset-btn">Reset Game</button>
-        <button id="change-mode">Change Mode</button>
+        <!-- Control Buttons -->
+        <div class="button-container">
+            <button id="new-game-btn">New Game</button>
+            <button id="reset-btn">Reset Game</button>
+            <button id="change-mode">Change Mode</button>
+        </div>
     </main>
 
     <footer>

@@ -44,6 +44,7 @@ body {
     grid-gap: 5px;
 }
 
+/* Styling for game cells */
 .box {
     width: 100px;
     height: 100px;
@@ -63,8 +64,6 @@ body {
     background: #d1e8ff;
     transform: scale(1.05);
 }
-
-
 
 /* Popup Styling */
 #popup {
@@ -89,7 +88,23 @@ body {
     align-items: center;
 }
 
-/* 🟢 Improved Button Styling */
+/* Button Container - Centered */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Moves buttons to the middle of the screen */
+    flex-direction: column;
+    gap: 10px; /* Adds space between buttons */
+}
+
+/* Game Container - Spacing Adjusted */
+.game-container {
+    margin-top: 20px; /* Adds space above the board */
+    margin-bottom: 20px; /* Space between board and buttons */
+}
+
+/* Improved Button Styling */
 button {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -118,7 +133,7 @@ button:active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* 🔴 Close Button */
+/* Close Button */
 #popup-close {
     background: linear-gradient(135deg, #ff4757, #e84118);
     color: white;
@@ -138,7 +153,7 @@ button:active {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔷 Modernized Input Fields */
+/* Input Fields */
 input[type="text"], input[type="number"], input[type="email"] {
     width: 80%;
     max-width: 300px;
@@ -165,6 +180,14 @@ input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: white;
+}
+
+/* Control Buttons Below Game Board */
+.controls {
+    margin-top: 20px; /* Adds space between the board and control buttons */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 /* Responsive Design */
