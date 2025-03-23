@@ -1,0 +1,181 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide elements */
+.hide {
+    display: none;
+}
+
+/* Popup inner content */
+.popup-content {
+    font-size: 20px;
+    padding: 15px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Game Board */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    font-size: 32px; /* Increased for better visibility */
+    font-weight: bold;
+    color: #333; /* Dark color for better contrast */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 2px solid #333;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box:hover {
+    background: #d1e8ff;
+    transform: scale(1.05);
+}
+
+
+
+/* Popup Styling */
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    width: 320px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#popup.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🟢 Improved Button Styling */
+button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Active (Click) Effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔴 Close Button */
+#popup-close {
+    background: linear-gradient(135deg, #ff4757, #e84118);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#popup-close:hover {
+    background: linear-gradient(135deg, #e84118, #b92d15);
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔷 Modernized Input Fields */
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 80%;
+    max-width: 300px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
+}
+
+/* Glassmorphic Effect for Special Buttons */
+.glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .game {
+        grid-template-columns: repeat(3, 80px);
+    }
+    
+    .box {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+}

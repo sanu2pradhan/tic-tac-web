@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mode Selection -->
+    <div class="mode-selection">
+        <button id="player-mode">Play with Friend</button>
+        <button id="computer-mode">Play with Computer</button>
+    </div>
+
+    <!-- Player Name Input -->
+    <div class="player-input hide">
+        <label for="player-name">Enter Your Name: </label>
+        <input type="text" id="player-name" placeholder="Your Name" required>
+
+        <div id="player2-input" class="hide">
+            <label for="player2-name">Enter Player 2 Name: </label>
+            <input type="text" id="player2-name" placeholder="Player 2 Name" required>
+        </div>
+
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <!-- Winner Popup -->
+    <div id="popup" class="hide">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button id="popup-close">OK</button>
+        </div>
+    </div>
+
+    <!-- Game Board -->
+    <main class="hide">
+        <h1>Tic Tac Toe Game</h1>
+
+        <!-- Scoreboard -->
+        <div class="score-board">
+            <h2 id="player-score">Player: 0</h2>
+            <h2 id="opponent-score">Computer: 0</h2>
+        </div>
+
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+
+        <button id="new-game-btn">New Game</button>
+        <button id="reset-btn">Reset Game</button>
+        <button id="change-mode">Change Mode</button>
+    </main>
+
+    <footer>
+        <p>Made by Suman Pradhan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
